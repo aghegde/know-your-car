@@ -11,6 +11,7 @@
 
             <div class="content-body">
                 <div class="success-text">Know your Car</div>
+                <IMG SRC="car.gif">
            </div>
               </div>
 </body>
