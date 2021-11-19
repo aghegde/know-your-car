@@ -12,7 +12,7 @@
 
 <div class="container">
   <div class="jumbotron">
-    <h1>Car for you</h1>
+    <h1>Car 4 U</h1>
   </div>
   <div class="row">
     <div class="col-sm-4">
