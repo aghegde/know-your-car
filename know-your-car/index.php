@@ -12,7 +12,7 @@
 
 <div class="container">
   <div class="jumbotron">
-    <h1>My First Bootstrap Page</h1>
+    <h1>Car for you</h1>
   </div>
   <div class="row">
     <div class="col-sm-4">
