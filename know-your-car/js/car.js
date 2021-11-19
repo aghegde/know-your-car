@@ -1,9 +1,31 @@
-// Taken from https://codepen.io/jonnitto/project/editor/XRPjxx
+$('document').ready(function(){
+  $('input[type="text"], input[type="email"], textarea').focus(function(){
+    var background = $(this).attr('id');
+    $('#' + background + '-form').addClass('formgroup-active');
+    $('#' + background + '-form').removeClass('formgroup-error');
+  });
+  $('input[type="text"], input[type="email"], textarea').blur(function(){
+    var background = $(this).attr('id');
+    $('#' + background + '-form').removeClass('formgroup-active');
+  });
 
-// Minimal Javascript (for Edge, IE and select box)
-document.addEventListener("change", function(event) {
-  let element = event.target;
-  if (element && element.matches(".form-element-field")) {
-    element.classList[element.value ? "add" : "remove"]("-hasvalue");
-  }
+function errorfield(field){
+  $(field).addClass('formgroup-error');
+  console.log(field);
+}
+
+$("#waterform").submit(function() {
+  var stopsubmit = false;
+
+if($('#name').val() == "") {
+  errorfield('#name-form');
+  stopsubmit=true;
+}
+if($('#email').val() == "") {
+  errorfield('#email-form');
+  stopsubmit=true;
+}
+  if(stopsubmit) return false;
+});
+
 });
